@@ -3,6 +3,9 @@ from django.http import HttpResponse
 
 from mi_app.models import Familia
 
+def inicio(request):
+    return HttpResponse("Vista Inicio")
+
 def mostrar_index(request):
     return render(request, "mi_app/index.html",{"mi_titulo":"Mi Aplicacion de CoderHouse"})
 
