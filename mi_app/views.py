@@ -3,8 +3,10 @@ from django.http import HttpResponse
 
 from mi_app.models import Familia
 
-def mi_template(request):
-    return render(request, "mi_app/index.html")
+def mostrar_index(request):
+    return render(request, "mi_app/index.html",{"mi_titulo":"Mi Aplicacion de CoderHouse"})
+
+
 
 def mis_familiares(request):
     context = {
@@ -12,5 +14,6 @@ def mis_familiares(request):
 
     }
     return render (request, "mi_app/mi_familia.html", context)
+
 
 # Create your views here.
