@@ -1,5 +1,6 @@
 from django.urls import path
 from mi_app import views
+from mi_app.views import mis_familiares
 
 urlpatterns = [
 
