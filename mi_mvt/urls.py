@@ -16,16 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from manejador_contenido.views import mostrar_home, mostrar_profile
-from mi_app.views import mi_familia, listar_estudiantes, listar_cursos
+from mi_app.views import mis_familiares, listar_estudiantes, listar_cursos
 
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    path('mi_app/', include('mi_app.urls')),
+    path('', include('mi_app.urls')),
     path('home/', mostrar_home),
     path('profile/', mostrar_profile),
-    path('familia/', mi_familia),
+    path('familia/', mis_familiares),
     path('lista_cursos/',listar_cursos),
     path('lista_estudiantes/',listar_estudiantes),
+     
 ]
